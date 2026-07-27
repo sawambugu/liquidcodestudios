@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- © 2026 Samuel Wambugu. All rights reserved. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -11,9 +12,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
+
 <svg style="position:absolute;width:0;height:0" aria-hidden="true">
 <defs>
   <filter id="sticker-edge" x="-22%" y="-22%" width="144%" height="144%" color-interpolation-filters="sRGB">
@@ -24,6 +26,7 @@
     <feComposite in="paper" in2="fat" operator="in" result="border"/>
     <feMerge><feMergeNode in="border"/><feMergeNode in="rough"/></feMerge>
   </filter>
+
   <filter id="glass-warp" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
     <feTurbulence type="fractalNoise" baseFrequency="0.65 0.85" numOctaves="1" seed="2" result="n"/>
     <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
@@ -95,8 +98,8 @@
     </div>
     <div class="menu-footer-socials">
       <a href="https://youtube.com/@sammywambugu" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/_liquidcodestudios" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
     </div>
   </footer>
 </div>
@@ -131,7 +134,7 @@
       <button class="filter-pill" data-filter="mobile">Mobile</button>
       <button class="filter-pill" data-filter="design">Design</button>
     </div>
-    <span class="filter-count" id="filter-count">5 projects to date</span>
+    <span class="filter-count" id="filter-count">5 projects</span>
   </div>
 
   <div class="proj-list" id="proj-list">
@@ -148,18 +151,6 @@
       <span class="row-action">Visit ↗</span>
     </a>
 
-  <div class="proj-row" data-status="dev" data-discipline="web">
-      <span class="row-status live">◐ Live</span>
-      <span class="row-type">Website</span>
-      <span class="row-main">
-        <span class="row-name">Lesella Technical Works</span>
-        <span class="row-sub">A precision-powered on-site company. Electrical works, HVAC, generators — you name it, they get it done.</span>
-      </span>
-      <span class="row-stack"><span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">JS</span></span>
-      <span class="row-action">View ↗</span>
-      <span class="row-progress"><span style="width:95%"></span></span>
-    </div>
-
     <div class="proj-row" data-status="dev" data-discipline="web">
       <span class="row-status dev">◐ In dev</span>
       <span class="row-type">Africaptions Media House</span>
@@ -172,7 +163,17 @@
       <span class="row-progress"><span style="width:80%"></span></span>
     </div>
 
-
+    <div class="proj-row" data-status="dev" data-discipline="web">
+      <span class="row-status dev">◐ Live</span>
+      <span class="row-type">Website</span>
+      <span class="row-main">
+        <span class="row-name">Lesella Technical Works</span>
+        <span class="row-sub">A precision-powered on-site company. Electrical works, HVAC, generators — you name it, they get it done.</span>
+      </span>
+      <span class="row-stack"><span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">JS</span></span>
+      <span class="row-action">View ↗</span>
+      <span class="row-progress"><span style="width:95%"></span></span>
+    </div>
 
     <div class="proj-row" data-status="dev" data-discipline="mobile">
       <span class="row-status dev">◐ In dev</span>
@@ -185,8 +186,6 @@
       <span class="row-action muted">65% built</span>
       <span class="row-progress"><span style="width:65%"></span></span>
     </div>
-
-
 
   </div>
   <div class="empty-state" id="empty-state" style="display:none">Nothing matches those filters yet.</div>
@@ -216,7 +215,7 @@
     <span>© <span class="js-year">2026</span> Samuel Wambugu · Mombasa, Kenya</span>
     <div class="footer-socials">
       <a href="https://youtube.com/@sammywambugu" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/_liquidcodestudios" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
     </div>
     <span>Liquid Code Studios</span>
   </div>
@@ -224,6 +223,6 @@
 
 <button id="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-<script src="script.js?v=9"></script>
+<script src="script.js?v=12"></script>
 </body>
 </html>

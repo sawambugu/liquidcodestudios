@@ -1,23 +1,25 @@
-/* © 2026 Samuel Wambugu. All rights reserved. See LICENSE.md. */
-/* ═══════════════════════════════════════════════════
-   LIQUID CODE STUDIOS — script.js
-   Samuel Wambugu · Kenya
-═══════════════════════════════════════════════════ */
+/* © 2026 Samuel Wambugu. All rights reserved. */
 const PAYSTACK_KEY  = 'pk_test_REPLACE_ME';
 const CONTACT_EMAIL = 'wambugusammy99@gmail.com';
+
 const WHATSAPP_NUMBER = '254745487698';
-const EYES_ENABLED = false;
 
 function waLink(text){
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 }
+
 const LIVE_PROJECT_COUNT = 3;
-const BIRTHDAY_MONTH = 5;   
-const BIRTHDAY_DAY   = 22;   
+const BIRTHDAY_MONTH = 5;
+const BIRTHDAY_DAY   = 22;
+
+const EYES_ENABLED = false;
+
 document.addEventListener('DOMContentLoaded', () => {
+
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $  = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
 const heroName = $('#hero-name');
 const heroWrap = $('#hero-wrap');
 if (heroName) {
@@ -26,6 +28,7 @@ if (heroName) {
     heroWrap && heroWrap.classList.add('in');
   }, 120);
 }
+
 (function heroScroll(){
   const brandName    = $('#brand-name');
   const stickerLayer = $('#sticker-layer');
@@ -38,18 +41,17 @@ if (heroName) {
     ticking = true;
     requestAnimationFrame(() => {
       const y    = scrollY;
-      const prog = Math.min(y / (innerHeight * 0.7), 1);   // 0→1 over first 70vh
+      const prog = Math.min(y / (innerHeight * 0.7), 1);
 
       if (!REDUCED && heroWrap) {
-        heroWrap.style.transform = `scale(${1 + prog * 0.18})`;   // → 1.18×
-        heroWrap.style.filter    = `blur(${prog * 18}px)`;        // → 18px
+        heroWrap.style.transform = `scale(${1 + prog * 0.18})`;
+        heroWrap.style.filter    = `blur(${prog * 18}px)`;
         heroWrap.style.opacity   = 1 - prog;
       }
       if (!REDUCED && stickerLayer) {
-        stickerLayer.style.transform = `translateY(${y * 0.35}px)`;  // 35% parallax
+        stickerLayer.style.transform = `translateY(${y * 0.35}px)`;
         stickerLayer.style.opacity   = 1 - prog * 0.6;
       }
-
       if (brandName) brandName.classList.toggle('show', prog > 0.5);
 
       ticking = false;
@@ -61,6 +63,7 @@ if (heroName) {
   addEventListener('scroll', onScroll, { passive:true });
   onScroll();
 })();
+
 $$('.sticker, .greeter').forEach(el => {
   const src = el.dataset.img;
   if (!src) return;
@@ -122,10 +125,11 @@ $$('.sticker, .greeter').forEach(el => {
     });
   });
 })();
+
 (function roleWord(){
   const el = $('#role-word');
   if (!el || REDUCED) return;
-  const roles = ['Creative', 'Photographer', 'Livestreamer', 'Web developer', 'Designer', 'Problem-solver', 'Student', 'Entrepreneur', 'Content creator', 'Video editor', 'Motion graphics artist'];
+  const roles = ['Creative', 'Photographer', 'Inquisitive', 'Web developer', 'Designer', 'Problem-solver'];
   let i = 0;
   setInterval(() => {
     el.style.opacity   = '0';
@@ -157,27 +161,28 @@ $$('.sticker, .greeter').forEach(el => {
   addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
 })();
 
-
-
 (function marquee(){
   const mq = $('#marquee');
   if (!mq) return;
-  const items = ['Web Development','Photography','Graphic Design','Video Editing','Motion Graphics','Social Media Management',
-                 'OBS', 'Livestreaming','Affinity','Lightroom','SEO Optimization'];
+  const items = ['Web Development','Photography','Android Apps',
+                 'UI Design','Node.js','PostgreSQL','Mombasa, Kenya'];
 
-  const REPEATS = 7;
+  const REPEATS = 6;
+
   const half = Array(REPEATS).fill(items).flat();
   mq.innerHTML = [...half, ...half]
     .map(t => `<span>${t}</span><span class="mx">✦</span>`).join('');
+
   mq.style.animationDuration = (30 * REPEATS) + 's';
 })();
+
 (function wordSplit(){
   const head = $('#ed-head');
   if (!head) return;
 
   (function walk(node){
     [...node.childNodes].forEach(n => {
-      if (n.nodeType === 3) {                                  // text node
+      if (n.nodeType === 3) {
         const frag = document.createDocumentFragment();
         n.textContent.split(/\s+/).filter(Boolean).forEach(word => {
           const s = document.createElement('span');
@@ -186,9 +191,9 @@ $$('.sticker, .greeter').forEach(el => {
           frag.append(s, document.createTextNode(' '));
         });
         n.replaceWith(frag);
-      } else if (n.nodeType === 1) {                           // element
+      } else if (n.nodeType === 1) {
         walk(n);
-        n.classList.add('w');                                  // animate it too
+        n.classList.add('w');
       }
     });
   })(head);
@@ -234,7 +239,6 @@ $$('.sticker, .greeter').forEach(el => {
   blocks.forEach(b => io.observe(b));
 
   function run(block){
-
     const target = LIVE_PROJECT_COUNT;
     const digits = parseInt(block.dataset.countDigits || '3', 10);
     const out    = block.querySelector('.counter-digits');
@@ -248,7 +252,7 @@ $$('.sticker, .greeter').forEach(el => {
     function step(ts){
       if (t0 === null) t0 = ts;
       const p = Math.min((ts - t0) / dur, 1);
-      paint(target * (1 - Math.pow(1 - p, 3)));       // easeOutCubic
+      paint(target * (1 - Math.pow(1 - p, 3)));
       if (p < 1) requestAnimationFrame(step);
       else paint(target);
     }
@@ -259,6 +263,7 @@ $$('.sticker, .greeter').forEach(el => {
       setTimeout(() => s.classList.add('in'), 300 + i * 140));
   }
 })();
+
 (function filters(){
   const list = $('#proj-list');
   if (!list) return;
@@ -296,10 +301,6 @@ $$('.sticker, .greeter').forEach(el => {
   apply();
 })();
 
-
-/* ═══════════════════════════════════════════════════
-   12 · SHOP + PAYSTACK
-═══════════════════════════════════════════════════ */
 (function shop(){
   const modal = $('#pay-modal');
   if (!modal) return;
@@ -366,6 +367,7 @@ $$('.sticker, .greeter').forEach(el => {
     }).openIframe();
   });
 })();
+
 (function contact(){
   const submit = $('#c-submit');
   if (!submit) return;
@@ -407,6 +409,7 @@ $$('.sticker, .greeter').forEach(el => {
     setTimeout(() => { submit.textContent = 'Send message →'; }, 2500);
   });
 })();
+
 (function toTop(){
   const btn = $('#to-top');
   if (!btn) return;
@@ -415,6 +418,7 @@ $$('.sticker, .greeter').forEach(el => {
     btn.classList.toggle('show', scrollY > 400);
   }, { passive:true });
 })();
+
 (function curtainWipe(){
   const STRIPS = 6;
   const wrap = document.createElement('div');
@@ -426,11 +430,11 @@ $$('.sticker, .greeter').forEach(el => {
     wrap.appendChild(s);
   }
   document.body.appendChild(wrap);
+
   requestAnimationFrame(() => requestAnimationFrame(() => {
     wrap.classList.add('out');
     setTimeout(() => wrap.classList.remove('out'), 900);
   }));
-
 
   document.addEventListener('click', e => {
     const a = e.target.closest('a[href]');
@@ -472,16 +476,17 @@ $$('.sticker, .greeter').forEach(el => {
   });
 })();
 
-
-/* ═══════════════════════════════════════════════════
-STILL BUGGED....WORK IN PROGRESS
-═══════════════════════════════════════════════════ */
 (function googlyEyes(){
-   if(!EYES_ENABLED) return;
   const hosts = $$('.eyes-track');
-  if (!hosts.length || REDUCED) return;
+  if (!hosts.length) return;
 
-  const MAX_SHIFT = 5;   // px the pupil can travel from centre
+  if (!EYES_ENABLED) {
+    document.documentElement.classList.add('eyes-disabled');
+    return;
+  }
+  if (REDUCED) return;
+
+  const MAX_SHIFT = 5;
 
   addEventListener('pointermove', e => {
     hosts.forEach(host => {
@@ -503,18 +508,6 @@ STILL BUGGED....WORK IN PROGRESS
   }, { passive:true });
 })();
 
-
-/* ═══════════════════════════════════════════════════
-   18b · CALIBRATOR — a tool, not a feature
-   Visit any page with ?calibrate on the URL, then click
-   directly on the eyes (menu greeter) or the About-page
-   letter — the exact % position is logged to the console
-   (and shown in an alert). Copy those numbers into
-   style.css: eyes → .eye.left/.eye.right, About letter →
-   --letter-x/--letter-y on .flip-cutout.
-   Remove ?calibrate from the URL when you're done — it
-   does nothing unless that flag is present.
-═══════════════════════════════════════════════════ */
 (function calibrator(){
   if (!location.search.includes('calibrate')) return;
 
@@ -535,26 +528,17 @@ STILL BUGGED....WORK IN PROGRESS
   console.log('Calibrator active — click the eyes or the About-page letter to read its position.');
 })();
 
-
-/* ═══════════════════════════════════════════════════
-   18c · FRAME LOOP CUTOUTS —   Markup:
-   <div class="flip-cutout"
-        data-frames="images/head-loop-1.png,images/head-loop-2.png,images/head-loop-3.png,images/head-loop-4.png"
-        data-flip-every="700">
-     <span class="sticker-face">🙂</span>   ← emoji fallback, shown until frames load
-   </div>
-
-═══════════════════════════════════════════════════ */
 (function frameLoopCutouts(){
   $$('.flip-cutout').forEach(el => {
     const raw = el.dataset.frames;
-    if (!raw) return;                     // no frames configured — leave the emoji alone
+    if (!raw) return;
 
     const urls = raw.split(',').map(s => s.trim()).filter(Boolean);
     if (!urls.length) return;
 
     const every = parseInt(el.dataset.flipEvery || '700', 10);
     let loaded  = [];
+
     let pending = urls.length;
     urls.forEach((src, i) => {
       const probe = new Image();
@@ -573,15 +557,15 @@ STILL BUGGED....WORK IN PROGRESS
 
     function settle(){
       pending--;
-      if (pending > 0) return;             
-      if (!loaded.length) return;       
+      if (pending > 0) return;
+      if (!loaded.length) return;
 
       loaded.sort((a, b) => a.dataset.order - b.dataset.order);
       const face = el.querySelector('.sticker-face');
       if (face) face.remove();
 
       loaded[0].classList.add('active');
-      if (loaded.length < 2 || REDUCED) return;   
+      if (loaded.length < 2 || REDUCED) return;
 
       let cur = 0;
       setInterval(() => {
@@ -608,8 +592,6 @@ STILL BUGGED....WORK IN PROGRESS
   setOrigin();
 })();
 
-
-
 (function menuStickerImages(){
   $$('.menu-sticker').forEach(el => {
     const src = el.dataset.img;
@@ -624,6 +606,7 @@ STILL BUGGED....WORK IN PROGRESS
     probe.src = src;
   });
 })();
+
 (function skeletons(){
   $$('.skeleton').forEach(el => {
     const src = el.dataset.shot;
@@ -640,24 +623,24 @@ STILL BUGGED....WORK IN PROGRESS
         if (content) content.replaceWith(real); else el.appendChild(real);
         reveal();
       };
-      img.onerror = () => setTimeout(reveal, 500);   
+      img.onerror = () => setTimeout(reveal, 500);
       img.src = src;
     } else {
-  
       setTimeout(reveal, 500 + Math.random() * 400);
     }
   });
 })();
+
 (function tiltCards(){
   if (REDUCED) return;
-  const MAX_TILT = 3;   // degrees
+  const MAX_TILT = 7;
 
   $$('.tilt-card').forEach(card => {
     card.style.perspective = '900px';
 
     card.addEventListener('pointermove', e => {
       const r  = card.getBoundingClientRect();
-      const px = (e.clientX - r.left) / r.width;   
+      const px = (e.clientX - r.left) / r.width;
       const py = (e.clientY - r.top)  / r.height;
       const rotY = (px - 0.5) *  MAX_TILT * 2;
       const rotX = (0.5 - py) *  MAX_TILT * 2;
@@ -672,16 +655,16 @@ STILL BUGGED....WORK IN PROGRESS
     });
   });
 })();
+
 (function seasonal(){
   if (REDUCED) return;
 
   const now   = new Date();
-  const month = now.getMonth() + 1;   // 1-12
+  const month = now.getMonth() + 1;
   const day   = now.getDate();
   const year  = now.getFullYear();
 
   const inRange = (m1,d1, m2,d2) => {
-    // handles ranges that cross the year boundary (e.g. Dec→Jan)
     const val = month * 100 + day, lo = m1*100 + d1, hi = m2*100 + d2;
     return lo <= hi ? (val >= lo && val <= hi) : (val >= lo || val <= hi);
   };
@@ -691,13 +674,11 @@ STILL BUGGED....WORK IN PROGRESS
   const isValentine = inRange(2,10, 2,16);
   const isHoliday    = inRange(12,1, 1,6);
 
-
   const DIWALI_DATES = {
     2025: [10, 20],
     2026: [11, 8],
     2027: [10, 29],
     2028: [10, 17],
-  
   };
   let isDiwali = false;
   const diwaliEntry = DIWALI_DATES[year];

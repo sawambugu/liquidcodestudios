@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- © 2026 Samuel Wambugu. All rights reserved. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -11,10 +12,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=9">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/css/flag-icons.min.css">
+<link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
+
 <svg style="position:absolute;width:0;height:0" aria-hidden="true">
 <defs>
   <filter id="sticker-edge" x="-22%" y="-22%" width="144%" height="144%" color-interpolation-filters="sRGB">
@@ -26,7 +27,6 @@
     <feMerge><feMergeNode in="border"/><feMergeNode in="rough"/></feMerge>
   </filter>
 
-  <!-- Liquid glass warp — subtle refraction for glass surfaces -->
   <filter id="glass-warp" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
     <feTurbulence type="fractalNoise" baseFrequency="0.65 0.85" numOctaves="1" seed="2" result="n"/>
     <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
@@ -94,12 +94,12 @@
     <div class="menu-footer-left">
       <span>©Samuel Wambugu <span class="js-year">2026</span></span>
       <span>All Rights Reserved</span>
-      <span class="fi fi-ke"></span>
+      <span>Mombasa, Kenya</span>
     </div>
     <div class="menu-footer-socials">
       <a href="https://youtube.com/@sammywambugu" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/_liquidcodestudios" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
     </div>
   </footer>
 </div>
@@ -119,7 +119,6 @@
     <div class="sticker" data-img="images/sticker-coffee.png" data-say="Fuel"
          style="--x:72%;--y:80%;--w:96px;--rot:-15deg;--dur:9.5s;--delay:2s"><span class="sticker-face">☕</span></div>
   </div>
- <button class="sticker-reset">Reset stickers</button>
 
   <div class="hero-name-wrap" id="hero-wrap">
     <h1 class="hero-name" id="hero-name">
@@ -128,8 +127,7 @@
     </h1>
     <p class="hero-tagline">
       <span class="dot"></span>
-      <span id="role-word">Creative</span> from 
-      <span class="fi fi-ke"></span>
+      <span id="role-word">Creative</span>· <svg class="flag-kenya" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-label="Kenya" role="img"><rect width="30" height="20" fill="#fff"/><rect width="30" height="6" fill="#000"/><rect y="6" width="30" height="2" fill="#fff"/><rect y="8" width="30" height="4" fill="#BB0000"/><rect y="12" width="30" height="2" fill="#fff"/><rect y="14" width="30" height="6" fill="#006600"/><g transform="translate(15,10)"><path d="M-3,-6 L3,-6 L4,-2 L4,3 Q4,7 0,8 Q-4,7 -4,3 L-4,-2 Z" fill="#BB0000" stroke="#000" stroke-width="0.6"/><path d="M-2,-4.5 L2,-4.5 L2.7,-1.5 L2.7,2.5 Q2.7,5.5 0,6.3 Q-2.7,5.5 -2.7,2.5 L-2.7,-1.5 Z" fill="#fff"/><path d="M-1.3,-3 L1.3,-3 L1.8,-0.8 L1.8,2 Q1.8,4.2 0,4.8 Q-1.8,4.2 -1.8,2 L-1.8,-0.8 Z" fill="#000"/></g></svg> Kenya
     </p>
   </div>
 
@@ -141,8 +139,8 @@
   <p class="eyebrow">Who is this guy? Huh?</p>
   <h2 class="editorial-headline" id="ed-head">A <span class="accent">follower of  Christ Jesus ,</span> web developer, photographer and creative — building things that matter from the <span class="accent">ground up</span>.</h2>
   <div class="editorial-body">
-   <!--<p>A photographer, livestreamer, a programmer who built this portfolio you are looking at.</p>-->  
-   <!--<p>Based in Kenya. Young, self-taught, always learning .</p>--> 
+    <p>A photographer, livestreamer, a programmer who built this portfolio you are looking at.</p>
+    <p>Based in Kenya. Young, self-taught, always learning .</p>
   </div>
   <div class="stats">
     <div class="stat"><div class="stat-n">2+</div><div class="stat-l">Years building</div></div>
@@ -171,7 +169,6 @@
     </div>
   </div>
 
-  <!-- .live-projects wraps all cards — the + .featured rule draws the separator -->
   <div class="live-projects">
 
     <article class="featured tilt-card">
@@ -202,7 +199,7 @@
       </div>
     </article>
 
-  </div><!-- /.live-projects -->
+  </div>
 </section>
 
 <div class="quote-feature">
@@ -232,12 +229,10 @@
 
 <footer class="site-footer">
   <div class="footer-base">
-      <span>©Samuel Wambugu <span class="js-year">2026</span></span>
-      <span>All Rights Reserved</span>
-      <span class="fi fi-ke"></span>
+    <span>© <span class="js-year">2026</span> Samuel Wambugu · Mombasa, Kenya</span>
     <div class="footer-socials">
       <a href="https://youtube.com/@sammywambugu" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/_liquidcodestudios" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
     </div>
     <span>Liquid Code Studios</span>
   </div>
@@ -245,6 +240,6 @@
 
 <button id="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-<script src="script.js?v=9"></script>
+<script src="script.js?v=12"></script>
 </body>
 </html>
