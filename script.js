@@ -2,25 +2,18 @@
 /* ═══════════════════════════════════════════════════
    LIQUID CODE STUDIOS — script.js
    Samuel Wambugu · Kenya
-  
 ═══════════════════════════════════════════════════ */
 const PAYSTACK_KEY  = 'pk_test_REPLACE_ME';
 const CONTACT_EMAIL = 'wambugusammy99@gmail.com';
-
-
 const WHATSAPP_NUMBER = '254745487698';
 
 function waLink(text){
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 }
-
 const LIVE_PROJECT_COUNT = 3;
 const BIRTHDAY_MONTH = 5;   
 const BIRTHDAY_DAY   = 22;   
-
-
 document.addEventListener('DOMContentLoaded', () => {
-
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $  = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
