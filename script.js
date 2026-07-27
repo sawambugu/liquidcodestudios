@@ -6,6 +6,7 @@
 const PAYSTACK_KEY  = 'pk_test_REPLACE_ME';
 const CONTACT_EMAIL = 'wambugusammy99@gmail.com';
 const WHATSAPP_NUMBER = '254745487698';
+const EYES_ENABLED = false;
 
 function waLink(text){
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
