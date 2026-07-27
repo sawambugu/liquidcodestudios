@@ -477,6 +477,7 @@ $$('.sticker, .greeter').forEach(el => {
 STILL BUGGED....WORK IN PROGRESS
 ═══════════════════════════════════════════════════ */
 (function googlyEyes(){
+   if(!EYES_ENABLED) return;
   const hosts = $$('.eyes-track');
   if (!hosts.length || REDUCED) return;
 
