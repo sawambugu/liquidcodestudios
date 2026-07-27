@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shop — Samuel Wambugu</title>
+<meta name="description" content="Lightroom presets, portfolio templates and developer starter kits.">
+<meta name="theme-color" content="#1d2440">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=9">
+</head>
+<body>
+
+<svg style="position:absolute;width:0;height:0" aria-hidden="true">
+<defs>
+  <filter id="sticker-edge" x="-22%" y="-22%" width="144%" height="144%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.038" numOctaves="3" seed="7" result="grain"/>
+    <feDisplacementMap in="SourceGraphic" in2="grain" scale="7" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+    <feMorphology in="rough" operator="dilate" radius="5" result="fat"/>
+    <feFlood flood-color="#f9fcf4" result="paper"/>
+    <feComposite in="paper" in2="fat" operator="in" result="border"/>
+    <feMerge><feMergeNode in="border"/><feMergeNode in="rough"/></feMerge>
+  </filter>
+
+  
+
+  <filter id="glass-warp" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.65 0.85" numOctaves="1" seed="2" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</defs>
+</svg>
+
+<header class="topbar">
+  <a href="index.html" class="brand"><span class="brand-name" id="brand-name">Samuel Wambugu</span></a>
+  <div class="topbar-right">
+    <button class="theme-btn" aria-label="Toggle light/dark mode">
+      <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+    </button>
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    <a href="contact.html" class="nav-cta">Work with me</a>
+  </div>
+</header>
+
+<div class="menu-panel" id="menu-panel">
+  <a href="index.html" class="menu-brand">Samuel Wambugu</a>
+  <div class="menu-close"><button class="x-btn" id="menu-close" aria-label="Close menu">✕</button></div>
+
+  <div class="menu-portrait">
+    <div class="menu-sticker-layer">
+      <div class="menu-sticker" data-img="images/sticker-camera.png"
+           style="--x:6%;--y:12%;--w:70px;--rot:-14deg;--pop-delay:.5s"><span class="sticker-face">📷</span></div>
+      <div class="menu-sticker" data-img="images/sticker-coffee.png"
+           style="--x:80%;--y:8%;--w:56px;--rot:12deg;--pop-delay:.62s"><span class="sticker-face">☕</span></div>
+      <div class="menu-sticker" data-img="images/sticker-headphones.png"
+           style="--x:4%;--y:72%;--w:66px;--rot:9deg;--pop-delay:.74s"><span class="sticker-face">🎧</span></div>
+    </div>
+    <div class="greeter eyes-track" data-img="images/cutout-head.png">
+      <span class="sticker-face">🙂</span>
+      <span class="eye left"><span class="pupil"></span></span>
+      <span class="eye right"><span class="pupil"></span></span>
+      <span class="greeter-bubble">Leaving so soon?</span>
+    </div>
+  </div>
+
+  <nav class="menu-list">
+    <a class="menu-item" href="projects.html">
+      <span class="menu-num">01</span>
+      <span class="menu-label">Work</span>
+    </a>
+    <a class="menu-item" href="about.html">
+      <span class="menu-num">02</span>
+      <span class="menu-label">About</span>
+    </a>
+    <a class="menu-item" href="quotes.html">
+      <span class="menu-num">03</span>
+      <span class="menu-label">Quotes</span>
+    </a>
+    <a class="menu-item active" href="shop.html">
+      <span class="menu-num">04</span>
+      <span class="menu-label">Shop</span>
+    </a>
+    <a class="menu-item" href="contact.html">
+      <span class="menu-num">05</span>
+      <span class="menu-label">Contact</span>
+      <span class="menu-ext">↗</span>
+    </a>
+  </nav>
+
+  <footer class="menu-footer">
+    <div class="menu-footer-left">
+      <span>©Samuel Wambugu <span class="js-year">2026</span></span>
+      <span>All Rights Reserved</span>
+      <span>Mombasa, Kenya</span>
+    </div>
+    <div class="menu-footer-socials">
+      <a href="https://youtube.com/@sammywambugu" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </footer>
+</div>
+
+<div class="page-hero">
+  <div class="sticker-layer" id="sticker-layer">
+    <div class="sticker" data-img="images/sticker-camera.png" data-say="Shot on this"
+         style="--x:12%;--y:30%;--w:116px;--rot:-10deg;--dur:10s;--delay:0s"><span class="sticker-face">📷</span></div>
+    <div class="sticker" data-say="Ready to install"
+         style="--x:84%;--y:32%;--w:102px;--rot:11deg;--dur:9s;--delay:.6s"><span class="sticker-face">📦</span></div>
+  </div>
+  <button class="sticker-reset">Reset stickers</button>
+
+  <div class="page-kicker">Digital goods</div>
+  <h1 class="page-title">Shop</h1>
+  <p class="page-sub">Presets, templates and starter kits. Paystack in KES, or grab it on Gumroad.</p>
+</div>
+
+<div class="pay-row">
+  <div class="pay-badge"><i class="fas fa-shield-halved" style="color:var(--accent-bright)"></i> Paystack secured</div>
+  <div class="pay-badge"><i class="fas fa-bag-shopping" style="color:var(--accent-bright)"></i> Also on Gumroad</div>
+  <div class="pay-badge"><i class="fas fa-bolt" style="color:var(--accent-bright)"></i> Instant download</div>
+</div>
+
+<div class="shop-grid">
+  <article class="shop-card">
+    <div class="shop-thumb skeleton" data-shot="" style="background:linear-gradient(135deg,#1e1740,#3a2470)"><span class="skeleton-content">🎞</span></div>
+    <div class="shop-body">
+      <div class="shop-cat">Lightroom</div>
+      <h3 class="shop-name">Mombasa Film Pack</h3>
+      <p class="shop-desc">10 cinematic presets shot and graded on the Kenyan coast. Warm highlights, deep shadows, real grain.</p>
+      <div class="shop-foot">
+        <div class="shop-price">KES 500 <small>≈ $4</small></div>
+        <div class="shop-btns">
+          <button class="btn-solid btn-sm buy-btn" data-product="mombasa-film-pack" data-price="500" data-name="Mombasa Film Pack">Buy</button>
+          <a href="https://sammy.gumroad.com/l/mombasa-film-pack" target="_blank" rel="noopener" class="btn-outline btn-sm">Gumroad</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="shop-card">
+    <div class="shop-thumb skeleton" data-shot="" style="background:linear-gradient(135deg,#171e39,#25457a)"><span class="skeleton-content">💻</span></div>
+    <div class="shop-body">
+      <div class="shop-cat">Template</div>
+      <h3 class="shop-name">Liquid Glass Portfolio</h3>
+      <p class="shop-desc">The exact system running this site — SVG warp filters, torn-paper stickers, scroll animations. No frameworks.</p>
+      <div class="shop-foot">
+        <div class="shop-price">KES 1,200 <small>≈ $9</small></div>
+        <div class="shop-btns">
+          <button class="btn-solid btn-sm buy-btn" data-product="liquid-glass-template" data-price="1200" data-name="Liquid Glass Portfolio">Buy</button>
+          <a href="https://sammy.gumroad.com/l/liquid-glass-template" target="_blank" rel="noopener" class="btn-outline btn-sm">Gumroad</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="shop-card">
+    <div class="shop-thumb skeleton" data-shot="" style="background:linear-gradient(135deg,#12281a,#1e4a2c)"><span class="skeleton-content">📦</span></div>
+    <div class="shop-body">
+      <div class="shop-cat">Starter kit</div>
+      <h3 class="shop-name">Node.js + PostgreSQL API</h3>
+      <p class="shop-desc">Production-ready REST boilerplate — JWT auth, role-based access, migrations and a clean folder structure.</p>
+      <div class="shop-foot">
+        <div class="shop-price">KES 800 <small>≈ $6</small></div>
+        <div class="shop-btns">
+          <button class="btn-solid btn-sm buy-btn" data-product="node-api-starter" data-price="800" data-name="Node.js API Starter">Buy</button>
+          <a href="https://sammy.gumroad.com/l/node-api-starter" target="_blank" rel="noopener" class="btn-outline btn-sm">Gumroad</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+
+<div class="modal-overlay" id="pay-modal">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+    <h3>Complete purchase</h3>
+    <p class="modal-product" id="modal-product"></p>
+    <div class="form-group" style="margin-top:20px">
+      <label class="form-label" for="buyer-email">Email address</label>
+      <input type="email" class="field" id="buyer-email" placeholder="you@email.com" autocomplete="email">
+    </div>
+    <div class="modal-price-row"><span>Total</span><span class="modal-price-val" id="modal-price">KES 0</span></div>
+    <button class="btn-solid" id="pay-btn" style="width:100%;margin-top:16px;padding:15px">Pay with Paystack →</button>
+    <p class="modal-note">Your download link is emailed the moment payment clears.</p>
+  </div>
+</div>
+
+<div class="footer-nav-grid">
+  <a href="index.html" class="fcard">
+    <div class="fcard-art">🏠</div>
+    <div class="fcard-label">Home<small>Back to the start</small></div>
+  </a>
+  <a href="projects.html" class="fcard">
+    <div class="fcard-art">🗂</div>
+    <div class="fcard-label">Work<small>Projects &amp; builds</small></div>
+  </a>
+  <a href="about.html" class="fcard">
+    <div class="fcard-art">👤</div>
+    <div class="fcard-label">About<small>Who I am</small></div>
+  </a>
+  <a href="quotes.html" class="fcard">
+    <div class="fcard-art">💬</div>
+    <div class="fcard-label">Quotes<small>Words I keep</small></div>
+  </a>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-base">
+    <span>© <span class="js-year">2026</span> Samuel Wambugu · Mombasa, Kenya</span>
+    <div class="footer-socials">
+      <a href="https://youtube.com/@sammywambugu" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <span>Liquid Code Studios</span>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="script.js?v=9"></script>
+</body>
+</html>

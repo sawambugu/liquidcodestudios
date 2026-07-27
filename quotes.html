@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quotes — Samuel Wambugu</title>
+<meta name="description" content="Scripture, craft and the lines Samuel Wambugu keeps coming back to.">
+<meta name="theme-color" content="#1d2440">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=9">
+</head>
+<body>
+
+
+<svg style="position:absolute;width:0;height:0" aria-hidden="true">
+<defs>
+  <filter id="sticker-edge" x="-22%" y="-22%" width="144%" height="144%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.038" numOctaves="3" seed="7" result="grain"/>
+    <feDisplacementMap in="SourceGraphic" in2="grain" scale="7" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+    <feMorphology in="rough" operator="dilate" radius="5" result="fat"/>
+    <feFlood flood-color="#f9fcf4" result="paper"/>
+    <feComposite in="paper" in2="fat" operator="in" result="border"/>
+    <feMerge><feMergeNode in="border"/><feMergeNode in="rough"/></feMerge>
+  </filter>
+
+  <filter id="glass-warp" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.65 0.85" numOctaves="1" seed="2" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</defs>
+</svg>
+
+<header class="topbar">
+  <a href="index.html" class="brand"><span class="brand-name" id="brand-name">Samuel Wambugu</span></a>
+  <div class="topbar-right">
+    <button class="theme-btn" aria-label="Toggle light/dark mode">
+      <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+    </button>
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    <a href="contact.html" class="nav-cta">Work with me</a>
+  </div>
+</header>
+
+<div class="menu-panel" id="menu-panel">
+  <a href="index.html" class="menu-brand">Samuel Wambugu</a>
+  <div class="menu-close"><button class="x-btn" id="menu-close" aria-label="Close menu">✕</button></div>
+
+  <div class="menu-portrait">
+    <div class="menu-sticker-layer">
+      <div class="menu-sticker" data-img="images/sticker-camera.png"
+           style="--x:6%;--y:12%;--w:70px;--rot:-14deg;--pop-delay:.5s"><span class="sticker-face">📷</span></div>
+      <div class="menu-sticker" data-img="images/sticker-coffee.png"
+           style="--x:80%;--y:8%;--w:56px;--rot:12deg;--pop-delay:.62s"><span class="sticker-face">☕</span></div>
+      <div class="menu-sticker" data-img="images/sticker-headphones.png"
+           style="--x:4%;--y:72%;--w:66px;--rot:9deg;--pop-delay:.74s"><span class="sticker-face">🎧</span></div>
+    </div>
+    <div class="greeter eyes-track" data-img="images/cutout-head.png">
+      <span class="sticker-face">🙂</span>
+      <span class="eye left"><span class="pupil"></span></span>
+      <span class="eye right"><span class="pupil"></span></span>
+      <span class="greeter-bubble">Leaving so soon?</span>
+    </div>
+  </div>
+
+  <nav class="menu-list">
+    <a class="menu-item" href="projects.html">
+      <span class="menu-num">01</span>
+      <span class="menu-label">Work</span>
+    </a>
+    <a class="menu-item" href="about.html">
+      <span class="menu-num">02</span>
+      <span class="menu-label">About</span>
+    </a>
+    <a class="menu-item active" href="quotes.html">
+      <span class="menu-num">03</span>
+      <span class="menu-label">Quotes</span>
+    </a>
+    <a class="menu-item" href="shop.html">
+      <span class="menu-num">04</span>
+      <span class="menu-label">Shop</span>
+    </a>
+    <a class="menu-item" href="contact.html">
+      <span class="menu-num">05</span>
+      <span class="menu-label">Contact</span>
+      <span class="menu-ext">↗</span>
+    </a>
+  </nav>
+
+  <footer class="menu-footer">
+    <div class="menu-footer-left">
+      <span>©Samuel Wambugu <span class="js-year">2026</span></span>
+      <span>All Rights Reserved</span>
+      <span>Mombasa, Kenya</span>
+    </div>
+    <div class="menu-footer-socials">
+      <a href="https://youtube.com/@sammywambugu" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/_liquidcodestudios" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+
+    </div>
+  </footer>
+</div>
+
+<div class="page-hero">
+  <div class="sticker-layer" id="sticker-layer">
+    <div class="sticker" data-img="images/sticker-bible.png" data-say="The anchor"
+         style="--x:10%;--y:24%;--w:116px;--rot:-12deg;--dur:10s;--delay:0s"><span class="sticker-face">✝️</span></div>
+    <div class="sticker" data-img="images/sticker-book.png" data-say="Marked up"
+         style="--x:83%;--y:28%;--w:122px;--rot:9deg;--dur:11s;--delay:.7s"><span class="sticker-face">📖</span></div>
+    <div class="sticker" data-say="Still writing"
+         style="--x:82%;--y:70%;--w:98px;--rot:-8deg;--dur:9s;--delay:1.3s"><span class="sticker-face">✍️</span></div>
+    <div class="sticker" data-say="Every morning"
+         style="--x:8%;--y:70%;--w:94px;--rot:14deg;--dur:10.5s;--delay:.4s"><span class="sticker-face">🌅</span></div>
+  </div>
+  <button class="sticker-reset">Reset stickers</button>
+
+  <div class="page-kicker">Words I keep</div>
+  <h1 class="page-title">Quotes</h1>
+  <p class="page-sub">Scripture, craft and the odd hard truth. The things I come back to.</p>
+  <p class="drag-hint">↙ drag the stickers</p>
+</div>
+
+<div class="quote-feature">
+  <span class="quote-mark">&ldquo;</span>
+  <blockquote>Above all else, guard your heart, for everything you do flows from it.</blockquote>
+  <cite>Proverbs 4:23</cite>
+</div>
+
+<div class="quote-grid">
+  <article class="quote-card wide">
+    <span class="qm">&ldquo;</span>
+    <p class="qt">You don't need a cape to take flight.</p>
+    <div class="qa"><span class="tag">Craft</span> Michael Jordan</div>
+  </article>
+
+  <article class="quote-card">
+    <span class="qm">&ldquo;</span>
+    <p class="qt">Commit to the Lord whatever you do, and he will establish your plans.</p>
+    <div class="qa"><span class="tag">Scripture</span> Proverbs 16:3</div>
+  </article>
+
+  <article class="quote-card">
+    <span class="qm">&ldquo;</span>
+    <p class="qt">Gear doesn't matter if you have the 'eye'.</p>
+    <div class="qa"><span class="tag">Photography</span> Samuel Wambugu</div>
+  </article>
+
+  <article class="quote-card">
+    <span class="qm">&ldquo;</span>
+    <p class="qt">Simplicity is the ultimate sophistication.</p>
+    <div class="qa"><span class="tag">Craft</span> Leonardo da Vinci</div>
+  </article>
+
+  <article class="quote-card wide">
+    <span class="qm">&ldquo;</span>
+    <p class="qt">Ship it, then make it better. A finished thing in someone's hands beats a perfect thing on your machine.</p>
+    <div class="qa"><span class="tag">Building</span> Liquid Code Studios</div>
+  </article>
+
+  <article class="quote-card">
+    <span class="qm">&ldquo;</span>
+    <p class="qt">The plans of the diligent lead to profit as surely as haste leads to poverty.</p>
+    <div class="qa"><span class="tag">Scripture</span> Proverbs 21:5</div>
+  </article>
+</div>
+
+<div class="footer-nav-grid">
+  <a href="index.html" class="fcard">
+    <div class="fcard-art">🏠</div>
+    <div class="fcard-label">Home<small>Back to the start</small></div>
+  </a>
+  <a href="projects.html" class="fcard">
+    <div class="fcard-art">🗂</div>
+    <div class="fcard-label">Work<small>Projects &amp; builds</small></div>
+  </a>
+  <a href="about.html" class="fcard">
+    <div class="fcard-art">👤</div>
+    <div class="fcard-label">About<small>Who I am</small></div>
+  </a>
+  <a href="shop.html" class="fcard">
+    <div class="fcard-art">🛍</div>
+    <div class="fcard-label">Shop<small>Presets &amp; templates</small></div>
+  </a>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-base">
+    <span>© <span class="js-year">2026</span> Samuel Wambugu · Mombasa, Kenya</span>
+    <div class="footer-socials">
+      <a href="https://youtube.com/@sammywambugu" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/_liquidcodestudios" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <span>Liquid Code Studios</span>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="script.js?v=9"></script>
+</body>
+</html>

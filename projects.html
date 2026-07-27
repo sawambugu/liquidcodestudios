@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Work — Samuel Wambugu</title>
+<meta name="description" content="Projects built by Samuel Wambugu at Liquid Code Studios.">
+<meta name="theme-color" content="#1d2440">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=9">
+</head>
+<body>
+<svg style="position:absolute;width:0;height:0" aria-hidden="true">
+<defs>
+  <filter id="sticker-edge" x="-22%" y="-22%" width="144%" height="144%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.038" numOctaves="3" seed="7" result="grain"/>
+    <feDisplacementMap in="SourceGraphic" in2="grain" scale="7" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+    <feMorphology in="rough" operator="dilate" radius="5" result="fat"/>
+    <feFlood flood-color="#f9fcf4" result="paper"/>
+    <feComposite in="paper" in2="fat" operator="in" result="border"/>
+    <feMerge><feMergeNode in="border"/><feMergeNode in="rough"/></feMerge>
+  </filter>
+  <filter id="glass-warp" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.65 0.85" numOctaves="1" seed="2" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</defs>
+</svg>
+
+<header class="topbar">
+  <a href="index.html" class="brand"><span class="brand-name" id="brand-name">Samuel Wambugu</span></a>
+  <div class="topbar-right">
+    <button class="theme-btn" aria-label="Toggle light/dark mode">
+      <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+    </button>
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    <a href="contact.html" class="nav-cta">Work with me</a>
+  </div>
+</header>
+
+<div class="menu-panel" id="menu-panel">
+  <a href="index.html" class="menu-brand">Samuel Wambugu</a>
+  <div class="menu-close"><button class="x-btn" id="menu-close" aria-label="Close menu">✕</button></div>
+
+  <div class="menu-portrait">
+    <div class="menu-sticker-layer">
+      <div class="menu-sticker" data-img="images/sticker-camera.png"
+           style="--x:6%;--y:12%;--w:70px;--rot:-14deg;--pop-delay:.5s"><span class="sticker-face">📷</span></div>
+      <div class="menu-sticker" data-img="images/sticker-coffee.png"
+           style="--x:80%;--y:8%;--w:56px;--rot:12deg;--pop-delay:.62s"><span class="sticker-face">☕</span></div>
+      <div class="menu-sticker" data-img="images/sticker-headphones.png"
+           style="--x:4%;--y:72%;--w:66px;--rot:9deg;--pop-delay:.74s"><span class="sticker-face">🎧</span></div>
+    </div>
+    <div class="greeter eyes-track" data-img="images/cutout-head.png">
+      <span class="sticker-face">🙂</span>
+      <span class="eye left"><span class="pupil"></span></span>
+      <span class="eye right"><span class="pupil"></span></span>
+      <span class="greeter-bubble">Leaving so soon?</span>
+    </div>
+  </div>
+
+  <nav class="menu-list">
+    <a class="menu-item active" href="projects.html">
+      <span class="menu-num">01</span>
+      <span class="menu-label">Work</span>
+    </a>
+    <a class="menu-item" href="about.html">
+      <span class="menu-num">02</span>
+      <span class="menu-label">About</span>
+    </a>
+    <a class="menu-item" href="quotes.html">
+      <span class="menu-num">03</span>
+      <span class="menu-label">Quotes</span>
+    </a>
+    <a class="menu-item" href="shop.html">
+      <span class="menu-num">04</span>
+      <span class="menu-label">Shop</span>
+    </a>
+    <a class="menu-item" href="contact.html">
+      <span class="menu-num">05</span>
+      <span class="menu-label">Contact</span>
+      <span class="menu-ext">↗</span>
+    </a>
+  </nav>
+
+  <footer class="menu-footer">
+    <div class="menu-footer-left">
+      <span>©Samuel Wambugu <span class="js-year">2026</span></span>
+      <span>All Rights Reserved</span>
+      <span>Mombasa, Kenya</span>
+    </div>
+    <div class="menu-footer-socials">
+      <a href="https://youtube.com/@sammywambugu" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/_liquidcodestudios" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      
+    </div>
+  </footer>
+</div>
+
+<div class="page-hero">
+  <div class="page-kicker">Portfolio</div>
+  <h1 class="page-title">Work</h1>
+  <p class="page-sub">Everything shipped and everything on the bench. Filter by status or discipline.</p>
+</div>
+
+<section class="counter-block" data-count-to="1" data-count-digits="3">
+  <div class="counter-shots">
+    <div class="counter-shot" style="--x:24%;--y:36%;--w:108px;--rot:-8deg"><div class="shot-face skeleton" data-shot=""><span class="skeleton-content">🏫</span></div></div>
+    <div class="counter-shot" style="--x:73%;--y:32%;--w:98px;--rot:9deg"><div class="shot-face skeleton" data-shot=""><span class="skeleton-content">🌐</span></div></div>
+    <div class="counter-shot" style="--x:50%;--y:72%;--w:112px;--rot:3deg"><div class="shot-face skeleton" data-shot=""><span class="skeleton-content">✅</span></div></div>
+  </div>
+  <div class="counter-digits">000</div>
+  <div class="counter-label">Successful launches</div>
+  <div class="counter-sub">two more in the pipeline · drag the photos</div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="filter-bar">
+    <div class="filter-group" data-filter-group="status">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="live">Live</button>
+      <button class="filter-pill" data-filter="dev">In development</button>
+    </div>
+    <div class="filter-group" data-filter-group="discipline">
+      <button class="filter-pill active" data-filter="all">Every discipline</button>
+      <button class="filter-pill" data-filter="web">Web</button>
+      <button class="filter-pill" data-filter="mobile">Mobile</button>
+      <button class="filter-pill" data-filter="design">Design</button>
+    </div>
+    <span class="filter-count" id="filter-count">5 projects to date</span>
+  </div>
+
+  <div class="proj-list" id="proj-list">
+
+    <a class="proj-row" href="https://destinygardenprecision.com" target="_blank" rel="noopener"
+       data-status="live" data-discipline="web">
+      <span class="row-status live">● Live</span>
+      <span class="row-type">Website</span>
+      <span class="row-main">
+        <span class="row-name">Destiny Garden Precision Centre</span>
+        <span class="row-sub">CBC primary school in Bamburi — admissions, curriculum, term dates and a parent portal.</span>
+      </span>
+      <span class="row-stack"><span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">JS</span></span>
+      <span class="row-action">Visit ↗</span>
+    </a>
+
+  <div class="proj-row" data-status="dev" data-discipline="web">
+      <span class="row-status live">◐ Live</span>
+      <span class="row-type">Website</span>
+      <span class="row-main">
+        <span class="row-name">Lesella Technical Works</span>
+        <span class="row-sub">A precision-powered on-site company. Electrical works, HVAC, generators — you name it, they get it done.</span>
+      </span>
+      <span class="row-stack"><span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">JS</span></span>
+      <span class="row-action">View ↗</span>
+      <span class="row-progress"><span style="width:95%"></span></span>
+    </div>
+
+    <div class="proj-row" data-status="dev" data-discipline="web">
+      <span class="row-status dev">◐ In dev</span>
+      <span class="row-type">Africaptions Media House</span>
+      <span class="row-main">
+        <span class="row-name">A media powerhouse in Kenya</span>
+        <span class="row-sub">High-end professional media coverage of social events — weddings, conferences, you name it.</span>
+      </span>
+      <span class="row-stack"><span class="tech-pill">HTML</span><span class="tech-pill">JS</span><span class="tech-pill">TSX</span></span>
+      <span class="row-action muted">80% built</span>
+      <span class="row-progress"><span style="width:80%"></span></span>
+    </div>
+
+
+
+    <div class="proj-row" data-status="dev" data-discipline="mobile">
+      <span class="row-status dev">◐ In dev</span>
+      <span class="row-type">Android + API</span>
+      <span class="row-main">
+        <span class="row-name">School Gate Access System</span>
+        <span class="row-sub">QR check-in/out for ~200 students. 13-table schema, 30+ REST endpoints, JWT auth, PDFKit ID cards, ZXing scanning.</span>
+      </span>
+      <span class="row-stack"><span class="tech-pill">Java</span><span class="tech-pill">Node.js</span><span class="tech-pill">PostgreSQL</span></span>
+      <span class="row-action muted">65% built</span>
+      <span class="row-progress"><span style="width:65%"></span></span>
+    </div>
+
+
+
+  </div>
+  <div class="empty-state" id="empty-state" style="display:none">Nothing matches those filters yet.</div>
+</section>
+
+<div class="footer-nav-grid">
+  <a href="index.html" class="fcard">
+    <div class="fcard-art">🏠</div>
+    <div class="fcard-label">Home<small>Back to the start</small></div>
+  </a>
+  <a href="about.html" class="fcard">
+    <div class="fcard-art">👤</div>
+    <div class="fcard-label">About<small>Who I am</small></div>
+  </a>
+  <a href="quotes.html" class="fcard">
+    <div class="fcard-art">💬</div>
+    <div class="fcard-label">Quotes<small>Words I keep</small></div>
+  </a>
+  <a href="shop.html" class="fcard">
+    <div class="fcard-art">🛍</div>
+    <div class="fcard-label">Shop<small>Presets &amp; templates</small></div>
+  </a>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-base">
+    <span>© <span class="js-year">2026</span> Samuel Wambugu · Mombasa, Kenya</span>
+    <div class="footer-socials">
+      <a href="https://youtube.com/@sammywambugu" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/_liquidcodestudios" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <span>Liquid Code Studios</span>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="script.js?v=9"></script>
+</body>
+</html>
