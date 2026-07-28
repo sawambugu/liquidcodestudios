@@ -165,7 +165,7 @@ $$('.sticker, .greeter').forEach(el => {
   const mq = $('#marquee');
   if (!mq) return;
   const items = ['Web Development','Photography','Android Apps',
-                 'UI Design','Node.js','PostgreSQL','Mombasa, Kenya'];
+                 'UI Design','Livestreaming','Mombasa, Kenya'];
 
   const REPEATS = 6;
 
@@ -173,7 +173,7 @@ $$('.sticker, .greeter').forEach(el => {
   mq.innerHTML = [...half, ...half]
     .map(t => `<span>${t}</span><span class="mx">✦</span>`).join('');
 
-  mq.style.animationDuration = (30 * REPEATS) + 's';
+  mq.style.animationDuration = (10 * REPEATS) + 's';
 })();
 
 (function wordSplit(){
