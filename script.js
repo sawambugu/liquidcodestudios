@@ -173,7 +173,7 @@ $$('.sticker, .greeter').forEach(el => {
   mq.innerHTML = [...half, ...half]
     .map(t => `<span>${t}</span><span class="mx">✦</span>`).join('');
 
-  mq.style.animationDuration = (10 * REPEATS) + 's';
+  mq.style.animationDuration = (8 * REPEATS) + 's';
 })();
 
 (function wordSplit(){
