@@ -1,4 +1,4 @@
-/* ©️ 2026 Samuel Wambugu. All rights reserved. */
+/* © 2026 Samuel Wambugu. All rights reserved. */
 :root{
   --navy:#1d2440;
   --navy-deep:#171e39;
@@ -1075,6 +1075,7 @@ textarea.field{height:145px;resize:vertical;}
   clip-path:circle(0% at var(--ox) var(--oy));
   transition:clip-path .62s cubic-bezier(.65,0,.35,1),
              background .4s ease;
+
 }
 .menu-panel.open{
   clip-path:circle(150% at var(--ox) var(--oy));
@@ -1336,8 +1337,6 @@ html.eyes-disabled .eye{display:none;}
 @media(max-width:640px){
   .flip-cutout{width:var(--letter-w,38%);}
 }
-
-/* ═══════════════════════════════════════════════════
    Overlay-based so it never fights the card's own
    background — it just sits on top, then fades away.
    Inspired by motion.dev's skeleton-shimmer pattern,
@@ -1377,8 +1376,6 @@ html.eyes-disabled .eye{display:none;}
   .skeleton::before{display:none;}
   .skeleton-content{opacity:1;}
 }
-
-/* ═══════════════════════════════════════════════════
    Card rotates toward the cursor, like a card catching
    the light. JS drives the live rotateX/Y; this just
    sets up the 3D context and the reset transition.
