@@ -489,8 +489,13 @@ a{color:inherit;}
 }
 @media(max-width:820px){
   .menu-panel{grid-template-columns:1fr;}
-  .menu-portrait{display:none;}
-  .menu-list{border-left:none;padding:90px var(--container-x) 40px;}
+  .menu-portrait{
+    display:block
+    height: 180px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .menu-list{border-left:none;padding: 20px;var(--container-x) 40px;}
 }
 @media(max-width:640px){
   .sticker{--w:80px !important;}
