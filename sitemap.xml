@@ -2,33 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://sammywambugu.com/</loc>
+    <loc>https://sammywambugu.com/index.html</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- About / Resume -->
+  <!-- About -->
   <url>
-    <loc>https://sammywambugu.com/about</loc>
+    <loc>https://sammywambugu.com/about.html</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
 
-  <!-- Projects / Portfolio -->
+  <!-- Projects -->
   <url>
-    <loc>https://sammywambugu.com/projects</loc>
+    <loc>https://sammywambugu.com/projects.html</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Shop -->
+  <url>
+    <loc>https://sammywambugu.com/shop.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Quotes -->
+  <url>
+    <loc>https://sammywambugu.com/quotes.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
 
   <!-- Contact -->
   <url>
-    <loc>https://sammywambugu.com/contact</loc>
+    <loc>https://sammywambugu.com/contact.html</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.9</priority>
   </url>
 </urlset>
