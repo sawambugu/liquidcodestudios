@@ -164,16 +164,16 @@ $$('.sticker, .greeter').forEach(el => {
 (function marquee(){
   const mq = $('#marquee');
   if (!mq) return;
-  const items = ['Web Development','Photography','Android Apps',
-                 'UI Design','Node.js','PostgreSQL','Mombasa, Kenya'];
+  const items = ['Web Development','Photography','Motion Graphics',
+                 'Livestreaming','Photo Presets'];
 
-  const REPEATS = 6;
+  const REPEATS = 4;
 
   const half = Array(REPEATS).fill(items).flat();
   mq.innerHTML = [...half, ...half]
     .map(t => `<span>${t}</span><span class="mx">✦</span>`).join('');
 
-  mq.style.animationDuration = (30 * REPEATS) + 's';
+  mq.style.animationDuration = (3 * REPEATS) + 's';
 })();
 
 (function wordSplit(){
