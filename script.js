@@ -159,6 +159,9 @@ $$('.sticker, .greeter').forEach(el => {
   btn.addEventListener('click', () => set(!panel.classList.contains('open')));
   close && close.addEventListener('click', () => set(false));
   addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+
+  $$('.menu-item', panel).forEach(link =>
+    link.addEventListener('click', () => set(false)));
 })();
 
 (function marquee(){
