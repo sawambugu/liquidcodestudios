@@ -222,17 +222,44 @@ a{color:inherit;}
 }
 .sticker:hover::after{opacity:1;transform:translateX(-50%) scale(1);}
 
+/* Scroll prompt — the Africaptions mouse + falling dot.
+   Sits at the BOTTOM OF THE HERO (absolute, not fixed) so it can never
+   float over body text further down the page. Fades once you scroll. */
 .scroll-cue{
-  position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
-  z-index:5;display:flex;flex-direction:column;align-items:center;gap:8px;
-  color:var(--lo);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  position:absolute;bottom:26px;left:50%;
+  transform:translateX(-50%);
+  z-index:6;pointer-events:none;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  font-family:'Outfit',sans-serif;
+  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--muted);
+  transition:opacity .45s ease,transform .45s ease;
 }
-.scroll-rail{width:1px;height:40px;background:rgba(249,252,244,.12);position:relative;overflow:hidden;}
-.scroll-rail::after{
-  content:'';position:absolute;top:-12px;left:0;width:1px;height:12px;
-  background:var(--accent-bright);animation:drop 1.7s ease-in-out infinite;
+.scroll-cue.hide{opacity:0;transform:translateX(-50%) translateY(12px);}
+.scroll-mouse{
+  width:26px;height:42px;border-radius:14px;
+  border:1.5px solid var(--lo);
+  position:relative;
 }
-@keyframes drop{0%{top:-12px;opacity:0;}30%{opacity:1;}100%{top:100%;opacity:0;}}
+.scroll-mouse .scroll-dot{
+  position:absolute;top:7px;left:50%;
+  width:4px;height:8px;border-radius:2px;
+  background:var(--accent-bright);
+  transform:translateX(-50%);
+  animation:scrollDot 1.8s var(--ease-out) infinite;
+}
+@keyframes scrollDot{
+  0%  {opacity:1;top:7px;}
+  60% {opacity:0;top:24px;}
+  61% {top:7px;}
+  100%{opacity:0;top:7px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .scroll-mouse .scroll-dot{animation:none;}
+}
+@media(max-width:640px){
+  .scroll-cue{bottom:20px;}
+}
 
 .menu-panel{
   position:fixed;inset:0;z-index:950;
@@ -999,8 +1026,11 @@ textarea.field{height:145px;resize:vertical;}
 }
 
 .contact-hero{
+  position:relative;
   max-width:var(--max-w);margin-inline:auto;
-  padding:clamp(130px,15vw,190px) var(--container-x) clamp(44px,6vw,72px);
+  /* extra bottom padding reserves clear space for the scroll cue,
+     which otherwise lands on .contact-sub on short/mobile viewports */
+  padding:clamp(130px,15vw,190px) var(--container-x) clamp(96px,10vw,120px);
 }
 .contact-headline{
   font-family:'Outfit',sans-serif;font-weight:700;

@@ -413,6 +413,14 @@ $$('.sticker, .greeter').forEach(el => {
   });
 })();
 
+(function scrollCue(){
+  const cue = $('#scroll-cue');
+  if (!cue) return;
+  const update = () => cue.classList.toggle('hide', scrollY > 60);
+  addEventListener('scroll', update, { passive:true });
+  update();
+})();
+
 (function toTop(){
   const btn = $('#to-top');
   if (!btn) return;
