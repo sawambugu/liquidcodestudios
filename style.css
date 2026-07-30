@@ -241,17 +241,24 @@ a{color:inherit;}
   transition:opacity .45s ease,visibility .45s ease,background .4s ease;
   display:grid;
   grid-template-columns:40% 1fr;
-  grid-template-rows:1fr auto;
+  grid-template-rows:auto 1fr auto;
   overflow:hidden;
 }
 .menu-panel.open{opacity:1;visibility:visible;background:var(--charcoal);}
 
+.menu-header{
+  grid-column:1/-1;grid-row:1;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:clamp(14px,2vw,22px) var(--container-x);
+  gap:12px;
+}
+.menu-header-right{display:flex;align-items:center;gap:10px;}
+.menu-cta{display:none;}
+
 .menu-brand{
-  position:absolute;top:clamp(14px,2vw,22px);left:var(--container-x);z-index:5;
   font-family:'Outfit',sans-serif;font-weight:700;font-size:1.2rem;
   color:#8FC6EF;text-decoration:none;
 }
-.menu-close{position:absolute;top:clamp(14px,2vw,22px);right:var(--container-x);z-index:5;}
 .x-btn{
   display:inline-flex;align-items:center;justify-content:center;
   width:42px;height:42px;border-radius:50%;
@@ -262,7 +269,7 @@ a{color:inherit;}
 .x-btn:hover{transform:rotate(90deg) scale(1.08);}
 
 .menu-portrait{
-  grid-column:1;grid-row:1;
+  grid-column:1;grid-row:2;
   display:flex;align-items:flex-end;
   overflow:hidden;padding-bottom:40px;
 }
@@ -288,7 +295,7 @@ a{color:inherit;}
 .menu-panel.open .greeter-bubble{opacity:1;transform:translateY(0) scale(1);}
 
 .menu-list{
-  grid-column:2;grid-row:1;
+  grid-column:2;grid-row:2;
   display:flex;flex-direction:column;justify-content:center;
   padding:clamp(60px,8vw,100px) var(--container-x) clamp(60px,8vw,100px) clamp(0px,2vw,20px);
   border-left:1px solid rgba(249,252,244,.05);
@@ -309,7 +316,7 @@ a{color:inherit;}
 .menu-panel.open .menu-item:nth-child(5){opacity:1;transform:none;transition-delay:.37s;}
 
 .menu-num{
-  font-size:.72rem;font-weight:600;color:rgba(249,252,244,.28);
+  font-size:.72rem;font-weight:600;color:rgba(249,252,244,.5);
   font-variant-numeric:tabular-nums;flex-shrink:0;
   transition:color .24s ease;
 }
@@ -355,7 +362,7 @@ a{color:inherit;}
 .menu-item:hover .menu-ext{border-color:var(--pink);color:var(--pink);}
 
 .menu-footer{
-  grid-column:1/-1;grid-row:2;
+  grid-column:1/-1;grid-row:3;
   display:flex;align-items:center;justify-content:space-between;
   padding:16px var(--container-x);
   border-top:1px solid rgba(249,252,244,.06);
@@ -363,14 +370,14 @@ a{color:inherit;}
 }
 .menu-footer-left{
   display:flex;gap:clamp(12px,2vw,24px);flex-wrap:wrap;align-items:center;
-  font-size:.7rem;color:rgba(249,252,244,.25);
+  font-size:.72rem;color:rgba(249,252,244,.55);
 }
 .menu-footer-socials{display:flex;gap:14px;}
 .menu-footer-socials a{
   width:34px;height:34px;border-radius:50%;
-  border:1px solid rgba(249,252,244,.15);
+  border:1px solid rgba(249,252,244,.28);
   display:flex;align-items:center;justify-content:center;
-  color:rgba(249,252,244,.4);text-decoration:none;font-size:.8rem;
+  color:rgba(249,252,244,.7);text-decoration:none;font-size:.8rem;
   transition:all .22s ease;
 }
 .menu-footer-socials a:hover{border-color:var(--pink);color:var(--pink);}
@@ -492,26 +499,65 @@ a{color:inherit;}
     grid-template-columns:1fr;
     grid-template-rows:auto 1fr auto;
   }
-  .menu-portrait{
-    grid-column:1;grid-row:1;
-    height:190px;
-    align-items:flex-end;justify-content:center;
-    padding-bottom:0;
+
+  /* TN drops the portrait entirely on mobile — it eats the whole
+     screen otherwise and pushes the actual navigation out of view */
+  .menu-portrait{display:none;}
+
+  /* The CTA moves into the menu header on mobile, since the topbar
+     underneath is covered by the panel */
+  .menu-cta{
+    display:inline-flex;
+    padding:9px 18px;font-size:.78rem;
   }
-  .greeter{
-    width:clamp(150px,42vw,210px);
-    margin-left:0;
-  }
+  .menu-brand{font-size:1.05rem;}
+
   .menu-list{
     grid-column:1;grid-row:2;
     border-left:none;
-    padding:24px var(--container-x) 30px;
+    justify-content:flex-start;
+    padding:8px var(--container-x) 20px;
+    gap:11px;
   }
-  .menu-footer{grid-column:1;grid-row:3;}
+
+  /* Menu items become filled rounded pills, not hairline rows */
+  .menu-item{
+    background:rgba(249,252,244,.055);
+    border:none;
+    border-radius:var(--r-full);
+    padding:20px 26px;
+    gap:20px;
+  }
+  .menu-item:first-child{border-top:none;}
+  /* The ::before glass fill sits at z-index:-1, which paints BEHIND
+     the item's own background — invisible now that items have one.
+     On mobile, tint the item background directly instead. */
+  .menu-item::before{display:none;}
+  .menu-item:hover,
+  .menu-item.active{
+    background:rgba(255,155,180,.14);
+    box-shadow:inset 0 0 0 1px rgba(255,155,180,.26);
+  }
+  .menu-label{font-size:1.85rem;}
+  .menu-num{font-size:.68rem;}
+  .menu-ext{width:34px;height:34px;}
+
+  /* Footer: socials row first, then the fine print beneath */
+  .menu-footer{
+    grid-column:1;grid-row:3;
+    flex-direction:column;align-items:flex-start;
+    gap:16px;padding:6px var(--container-x) 22px;
+  }
+  .menu-footer-socials{order:-1;gap:11px;}
+  .menu-footer-left{
+    flex-direction:column;align-items:flex-start;
+    gap:5px;line-height:1.5;
+  }
 }
 @media(max-width:640px){
   .sticker{--w:80px !important;}
-  .menu-footer{justify-content:center;text-align:center;}
+  .menu-label{font-size:1.6rem;}
+  .menu-item{padding:17px 22px;}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
