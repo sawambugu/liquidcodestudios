@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- © 2026 Samuel Wambugu. All rights reserved. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page not found — Samuel Wambugu</title>
+<meta name="description" content="That page doesn't exist — but the rest of the site does.">
+<meta name="theme-color" content="#1d2440">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=20">
+
+<style>
+
+.nf{
+  position:relative;
+  min-height:100svh;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;
+  padding:var(--container-x);
+  overflow:hidden;isolation:isolate;
+}
+
+
+.nf-bg{
+  position:absolute;inset:0;z-index:-2;
+  background:
+    radial-gradient(120% 80% at 50% 108%, rgba(108,171,221,.22), transparent 60%),
+    radial-gradient(90% 60% at 50% -10%, rgba(143,198,239,.13), transparent 62%),
+    var(--navy);
+}
+
+.nf-bg.has-image::before{
+  content:'';position:absolute;inset:0;
+  background-image:var(--nf-img);
+  background-size:cover;background-position:center;
+  opacity:.3;
+  filter:saturate(.75);
+}
+.nf-bg.has-image::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,
+    rgba(29,36,64,.78) 0%, rgba(29,36,64,.6) 45%, rgba(23,30,57,.9) 100%);
+}
+
+
+.nf-clouds{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden;}
+.nf-cloud{
+  position:absolute;border-radius:50%;
+  background:radial-gradient(circle at 42% 46%,
+    rgba(143,198,239,.16), rgba(108,171,221,.07) 55%, transparent 72%);
+  filter:blur(26px);
+  animation:nf-drift linear infinite;
+}
+@keyframes nf-drift{
+  from{transform:translateX(-32vw);}
+  to  {transform:translateX(132vw);}
+}
+
+.nf-mote{
+  position:absolute;width:3px;height:3px;border-radius:50%;
+  background:var(--accent-bright);
+  box-shadow:0 0 8px 2px rgba(143,198,239,.5);
+  animation:nf-float linear infinite;
+}
+@keyframes nf-float{
+  0%  {transform:translateY(0) translateX(0);opacity:0;}
+  14% {opacity:.85;}
+  86% {opacity:.85;}
+  100%{transform:translateY(-72vh) translateX(20px);opacity:0;}
+}
+
+.nf-inner{position:relative;z-index:2;max-width:640px;}
+
+
+.nf-code{
+  font-family:'Outfit',sans-serif;font-weight:700;
+  font-size:clamp(5.5rem,21vw,14rem);
+  line-height:.85;letter-spacing:-.045em;
+  color:var(--accent-bright);
+  margin:0;
+  opacity:0;transform:translateY(28px);
+  animation:nf-rise .9s var(--ease-out) .15s forwards;
+}
+@keyframes nf-rise{to{opacity:1;transform:translateY(0);}}
+
+.nf-rule{
+  width:min(300px,68vw);height:1px;
+  background:var(--navy-line);
+  margin:clamp(20px,3vh,32px) auto;
+  transform:scaleX(0);transform-origin:center;
+  animation:nf-line .8s var(--ease-out) .5s forwards;
+}
+@keyframes nf-line{to{transform:scaleX(1);}}
+
+
+.nf-msg{
+  font-family:'Inter',sans-serif;
+  font-size:clamp(.95rem,2vw,1.05rem);
+  line-height:1.75;color:var(--para);
+  margin:0 auto;max-width:38ch;
+  opacity:0;animation:nf-fade .9s ease .75s forwards;
+}
+@keyframes nf-fade{to{opacity:1;}}
+
+.nf-actions{
+  display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
+  margin-top:clamp(30px,5vh,48px);
+  opacity:0;animation:nf-fade .9s ease 1s forwards;
+
+
+@media(prefers-reduced-motion:reduce){
+  .nf-cloud,.nf-mote{animation:none;}
+  .nf-code,.nf-rule,.nf-msg,.nf-actions{animation:none;opacity:1;transform:none;}
+  .nf-rule{transform:scaleX(1);}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="index.html" class="brand"><span class="brand-name show" id="brand-name">Samuel Wambugu</span></a>
+  <div class="topbar-right">
+    <button class="theme-btn" aria-label="Toggle light/dark mode">
+      <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+    </button>
+    <a href="contact.html" class="nav-cta">Work with me</a>
+  </div>
+</header>
+
+<main class="nf">
+  <!-- Optional background image. Drop a file at images/404-bg.png and it
+       fades in under a navy veil. Without it, the CSS backdrop shows. -->
+  <div class="nf-bg" id="nf-bg" style="--nf-img:url('images/404-bg.png')"></div>
+  <div class="nf-clouds" id="nf-clouds"></div>
+
+  <div class="nf-inner">
+    <h1 class="nf-code">404</h1>
+    <div class="nf-rule"></div>
+    <p class="nf-msg">The path may be broken, but the journey isn't. Let's get you back.</p>
+
+    <div class="nf-actions">
+      <a href="index.html" class="btn-solid">Back home</a>
+      <a href="projects.html" class="btn-outline">See the work</a>
+    </div>
+  </div>
+</main>
+
+<script src="script.js?v=20"></script>
+<script>
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const clouds = document.getElementById('nf-clouds');
+  if (!clouds) return;
+
+  for (let i = 0; i < 6; i++){
+    const c = document.createElement('div');
+    c.className = 'nf-cloud';
+    const w = 260 + Math.random() * 420;
+    c.style.width  = w + 'px';
+    c.style.height = (w * (0.30 + Math.random() * 0.2)) + 'px';
+    c.style.top    = (Math.random() * 66) + '%';
+    c.style.animationDuration = (60 + Math.random() * 75) + 's';
+    c.style.animationDelay    = (-Math.random() * 95) + 's';
+    clouds.appendChild(c);
+  }
+
+  for (let i = 0; i < 14; i++){
+    const m = document.createElement('div');
+    m.className = 'nf-mote';
+    m.style.left = (Math.random() * 100) + '%';
+    m.style.top  = (58 + Math.random() * 42) + '%';
+    m.style.animationDuration = (12 + Math.random() * 16) + 's';
+    m.style.animationDelay    = (-Math.random() * 22) + 's';
+    clouds.appendChild(m);
+  }
+
+  const bg = document.getElementById('nf-bg');
+  const src = (bg.style.getPropertyValue('--nf-img') || '').replace(/url\(['"]?|['"]?\)/g, '').trim();
+  if (src){
+    const probe = new Image();
+    probe.onload = () => bg.classList.add('has-image');
+    probe.src = src;
+  }
+})();
+</script>
+</body>
+</html>
